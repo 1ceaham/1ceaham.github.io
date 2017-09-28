@@ -1,4 +1,4 @@
-baseURL = "https://1ceaham.github.io"
+baseURL = "https://aidanmeacham.com"
 title = "Aidan Meacham"
 copyright = ""
 
@@ -54,10 +54,10 @@ preserveTaxonomyNames = true
   page = "/:slug/"
 
 [[menu.main]]
-  name = "Blog"
+  name = "Home"
   weight = -70
-  identifier = "1ceaham"
-  url = "https://1ceaham.github.io"
+  identifier = "home"
+  url = "https://aidanmeacham.com"
 
 # Language Configuration
 defaultContentLanguage = "en"
