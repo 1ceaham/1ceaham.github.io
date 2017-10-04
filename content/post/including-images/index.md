@@ -6,7 +6,7 @@ tags:
   - updates
 title: "Ways to Include Images in Hugo"
 date: "2017-10-01T19:36:35-07:00"
-draft: true
+draft: false
 ---
 
 What started out as an attempt to put together a travelogue turned into a rabbit hole about how best to store and reference images. There is some valuable [discussion](https://github.com/gohugoio/hugo/issues/3651) about where the topic may end up (who knows, maybe I'll learn Go and take a crack at it myself), but also details the methods that are currently being used to various effect. One other topic I wanted to explore is the *figure* shortcode, which supports a little more information than a simple markdown image, and is more flexible for use with a theme. Further note that I wanted to link to the full image, which in some cases, took even more wrangling.
@@ -50,3 +50,5 @@ The advantage of this method is the relative simplicity without use of a shortco
 {{< /highlight >}}
 
 If you are interested in keeping image content with a given article (like I have done here), it makes sense to create a folder under posts rather than a single markdown file. Creating an "index.md" in that folder allows the slug with that folder name to behave just like a typical post, with the cost of slightly more organizational overhead. The result, however, is quite intuitive - the shortest style for including an image, with the added benefit of keeping the image close to the content itself (rather than being lost in /static/ where it could be forgotten).
+
+Next time 'round, we'll talk about galleries, thumbnails and other ways to avoid serving huge images up front!
