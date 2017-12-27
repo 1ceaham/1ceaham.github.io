@@ -2,6 +2,7 @@
 title: "Publications"
 date: "2017-11-08T18:27:23-07:00"
 draft: false
+type: "staticpage"
 ---
 
 <!-- # Publications and Presentations -->

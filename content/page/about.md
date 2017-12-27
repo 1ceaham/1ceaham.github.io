@@ -3,6 +3,7 @@ title: "About"
 menu: main
 date: "2017-09-27T21:27:23-07:00"
 draft: false
+type: "staticpage"
 ---
 
 Hi there!

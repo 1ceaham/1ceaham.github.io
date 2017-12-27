@@ -2,6 +2,7 @@
 title: "CV"
 date: "2017-10-16T18:27:23-07:00"
 draft: false
+type: "staticpage"
 ---
 
 # Aidan Meacham
