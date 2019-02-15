@@ -1,23 +1,13 @@
-if [[ $(git status -s) ]]
-then
-    echo "The working directory is dirty. Please commit any pending changes."
-    exit 1;
-fi
+hugo -v # command to build your site
+cd public # cd into folder containing your built site
 
-echo "Deleting old publication"
-rm -rf public
-git worktree prune
-rm -rf .git/worktrees/public/
-mkdir public
+git init
+git config user.name "Aidan Meacham"
+git config user.email "1ceaham@gmail.com"
 
-echo "Checking out master branch into public"
-git worktree add -B master public origin/master
+echo "aidanmeacham.com" > CNAME # domain your site will live at
+git add .
+git commit -m "Deploy from CircleCI" # this will always be the only commit in your master branch
 
-echo "Removing existing files"
-rm -rf public/*
-
-echo "Generating site"
-../bin/hugo
-
-echo "Updating master branch"
-cd public && git add --all && git commit -m "Publish to master (publish.sh)" && git push
+# use --quiet to avoid printing token in build logs
+git push --force --quiet "https://${CI_TOKEN}@github.com/seangransee/blog.git" source:master # path to your repo on GitHub, using token for authentication
