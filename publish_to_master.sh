@@ -1,3 +1,6 @@
+#! /bin/bash
+set -e # stop in the case of failure
+
 hugo -v # command to build your site
 cp -R .circleci public/.circleci # copy config to ignore master on next build
 cd public # cd into folder containing your built site
