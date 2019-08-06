@@ -12,13 +12,13 @@ type: "staticpage"
 Aidan Meacham, Lauri Savioja, Sara R. Martin, Julius O. Smith, III.
 AES eBrief, presented at 141st AES Convention (Los Angeles, September 2016).**
 
-Preliminary exploration of extension of DWNs allowing for diffraction, room coupling, multiple sound sources, and binaural output in a very lightweight soundfield representation. Implemented in C++ with JUCE.
+Preliminary exploration of extension of DWNs allowing for diffraction, room coupling, multiple sound sources, and binaural output in a very lightweight soundfield representation. Implemented in C++ with JUCE. Download the paper [here.](/doc/ncdwn-aes-ebrief-16.pdf)
 
 **_The Laptop Accordion._
 Aidan Meacham, Sanjay Kannan, Ge Wang.
 Presented at and published in proceedings of NIME (Brisbane, 2016).**
 
-Designed and implemented digital instrument leveraging laptop cameras as a tracking device for the opening and closing of a laptop lid, an analog for the squeezing of an accordion bellows.
+Designed and implemented digital instrument leveraging laptop cameras as a tracking device for the opening and closing of a laptop lid, an analog for the squeezing of an accordion bellows. Download the paper [here.](/doc/laptop-accordion-nime-16.pdf)
 
 **_Room impulse response synthesis with device diffraction via image source method and finite element analysis._
 Aidan Meacham, Andrew Unruh.
