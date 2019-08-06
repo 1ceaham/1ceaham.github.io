@@ -11,7 +11,7 @@ Paginate = 5
 preserveTaxonomyNames = true
 
 [params]
-  description = "Acoustic Engineer, San Francisco"
+  description = "PhD Candidate, Paris // Acoustic Engineer, San Francisco"
   dateFormat = "2006, Jan 2"
   # copyrightOwner = "Aidan Meacham"
   # copyrightStartYear = "2017"
