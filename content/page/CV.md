@@ -19,6 +19,12 @@ type: "staticpage"
 
 *Sound field modelling in 2 and 3 dimensions.* Thesis directors Jean-Dominique Polack (*Institut ∂'Alembert*) and Roland Badeau (*LTCI, Télécom ParisTech, Université Paris-Saclay*).
 
+*Theoretical Acoustics.* Studying statistical late reverberation through an energetic wave equation in energy density and sound intensity (similar to diffusion equation approaches) to efficiently model sound fields in large spaces.
+
+*Finite Volume Time Domain Modelling.* Implemented FVTD scheme to simulate the energetic wave equation and fit input parameters to observed phenomena.
+
+*Acoustic Measurements.* Captured and studied spatial impulse responses using Soundfield and Tetramic devices in diffuse and non-diffuse contexts.
+
 ## Stanford University, 2015 - 2016
 **MA in Music, Science, & Technology**, Center for Computer Research in Music and Acoustics (CCRMA), 3.98 GPA
 
@@ -41,7 +47,7 @@ Projects include research on the vibrational modes of musical saws with electron
 # Teaching Experience
 
 ## Sorbonne Université - UFR 919 Ingénierie - Licence Mécanique
-*Numerical Methods for Mechanics.* Lab instructor. Introduction to root finding, solutions to linear systems, and eigenproblems in Fortran.
+*Numerical Methods for Mechanics.* Lab instructor, donné en francais. Introduction to root finding, solutions to linear systems, and eigenproblems in Fortran.
 
 ---
 # Work Experience
