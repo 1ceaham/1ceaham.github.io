@@ -47,7 +47,10 @@ Projects include research on the vibrational modes of musical saws with electron
 # Teaching Experience
 
 ## Sorbonne Université - UFR 919 Ingénierie - Licence Mécanique
-*Numerical Methods for Mechanics.* Lab instructor, donné en francais. Introduction to root finding, solutions to linear systems, and eigenproblems in Fortran.
+### All teaching in French
+*Finite Differences, L3.* Spatial and temporal discretization of partial differential equations, meshing, efficient resolution of matrix systems. Theoretical background and numerical implementation in Fortran.
+
+*Numerical Methods for Mechanics, L3.* Introduction to root finding, solutions to linear systems, and eigenproblems. Numerical computation in Fortran.
 
 ---
 # Work Experience
