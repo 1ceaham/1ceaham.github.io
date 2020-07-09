@@ -11,6 +11,10 @@ type: "staticpage"
 
 *Acoustic Engineer - San Francisco, California, USA*
 
+https://aidanmeacham.com/cv/
+
+https://www.linkedin.com/in/aidanmeacham/
+
 ---
 # Education
 
