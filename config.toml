@@ -4,6 +4,8 @@ copyright = ""
 
 theme = "minimo"
 
+disablePathToLower = true
+
 disqusShortname = ""
 googleAnalytics = ""
 Paginate = 5
