@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Updates on Aidan Meacham</title>
+    <link>https://aidanmeacham.com/tags/updates/</link>
+    <description>Recent content in Updates on Aidan Meacham</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 27 Apr 2020 13:25:05 -0700</lastBuildDate>
+    
+	<atom:link href="https://aidanmeacham.com/tags/updates/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>MATLAB utility: sendToRemote</title>
+      <link>https://aidanmeacham.com/post/matlab-utility-sendtoremote/</link>
+      <pubDate>Mon, 27 Apr 2020 13:25:05 -0700</pubDate>
+      
+      <guid>https://aidanmeacham.com/post/matlab-utility-sendtoremote/</guid>
+      <description>sendToRemote: A MATLAB utility for running code on a remote server In the course of iterating on simulation code that was painful enough on my local machine to merit running on a more powerful server, I found myself copying code back and forth, shelling in and out, and feeling like I was losing a lot of time to &amp;ldquo;bookkeeping&amp;rdquo; rather than actually working on my code.
+So, I spent a lot of time writing a utility so I could handle the situation directly in MATLAB rather than switching back and forth between the local IDE and terminal.</description>
+    </item>
+    
+    <item>
+      <title>Tutorial report: ∂’Alembert learns git</title>
+      <link>https://aidanmeacham.com/post/tutorial-report-dalembert/</link>
+      <pubDate>Mon, 27 Apr 2020 12:05:15 -0700</pubDate>
+      
+      <guid>https://aidanmeacham.com/post/tutorial-report-dalembert/</guid>
+      <description>Quick update! It&amp;rsquo;s been a while since I&amp;rsquo;ve updated the site (beyond cursory CV updates), so this and the next few posts will be a quick dump of some of the projects I&amp;rsquo;ve been working on.
+Tutorial: Version Control &amp;amp; Git on January 31, 2020 Back at the end of January (almost 3 months ago!!), I gave a tutorial for interested doctorants / post-docs / faculty at the Institut ∂’Alembert.</description>
+    </item>
+    
+    <item>
+      <title>Ways to Include Images in Hugo</title>
+      <link>https://aidanmeacham.com/post/including-images/</link>
+      <pubDate>Sun, 01 Oct 2017 19:36:35 -0700</pubDate>
+      
+      <guid>https://aidanmeacham.com/post/including-images/</guid>
+      <description>What started out as an attempt to put together a travelogue turned into a rabbit hole about how best to store and reference images. There is some valuable discussion about where the topic may end up (who knows, maybe I&amp;rsquo;ll learn Go and take a crack at it myself), but also details the methods that are currently being used to various effect. One other topic I wanted to explore is the figure shortcode, which supports a little more information than a simple markdown image, and is more flexible for use with a theme.</description>
+    </item>
+    
+    <item>
+      <title>Adding Email Forwarding... Eventually</title>
+      <link>https://aidanmeacham.com/post/add-email/</link>
+      <pubDate>Wed, 27 Sep 2017 21:07:01 -0700</pubDate>
+      
+      <guid>https://aidanmeacham.com/post/add-email/</guid>
+      <description>A reminder: When it comes to DNS, patience is a virtue. I&amp;rsquo;ve set up email forwarding through mailgun.com, or at least expect that will be the case when DNS resolves. Once that happens, feel free to say hi via the address at the bottom of the page.
+EDIT: This works now. Say hi if you like!</description>
+    </item>
+    
+    <item>
+      <title>Test post; please ignore</title>
+      <link>https://aidanmeacham.com/post/first-post/</link>
+      <pubDate>Mon, 25 Sep 2017 16:42:03 -0700</pubDate>
+      
+      <guid>https://aidanmeacham.com/post/first-post/</guid>
+      <description>Keep watching this space! As I work on migrating, you&amp;rsquo;ll be able to find my projects and publications here.
+Thanks to gsempe for the tutorial!</description>
+    </item>
+    
+  </channel>
+</rss>
