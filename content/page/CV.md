@@ -7,7 +7,7 @@ type: "staticpage"
 
 # Aidan Meacham
 
-*PhD Candidate - Paris, France*
+*PhD, Acoustics, Sorbonne Université - Paris, France*
 
 *Acoustic Engineer - San Francisco, California, USA*
 
@@ -18,16 +18,16 @@ https://www.linkedin.com/in/aidanmeacham/
 ---
 # Education
 
-## Sorbonne Université, 2018 - 2021 (Projected)
-**PhD Candidate**, Institut Jean le Rond ∂'Alembert
+## Sorbonne Université, 2018 - 2021
+**PhD, Specialization in Acoustics**, Institut Jean le Rond ∂'Alembert, thesis defended December 9, 2021
 
-*Sound field modelling in 2 and 3 dimensions.* Thesis directors Jean-Dominique Polack (*Institut ∂'Alembert*) and Roland Badeau (*LTCI, Télécom ParisTech, Université Paris-Saclay*).
+*Toward Three-Dimensional Computation of the Acoustic Energy-Stress Tensor.* Thesis directors Jean-Dominique Polack (*Institut ∂'Alembert*) and Roland Badeau (*LTCI, Télécom Paris, Université Paris-Saclay*).
 
-*Theoretical Acoustics.* Studying statistical late reverberation through an energetic wave equation in energy density and sound intensity (similar to diffusion equation approaches) to efficiently model sound fields in large spaces.
+*Theoretical Acoustics.* Studied statistical late reverberation through an energetic wave equation in energy density and sound intensity (similar to diffusion equation approaches) to efficiently model sound fields in large spaces.
 
 *Finite Volume Time Domain Modelling.* Implemented FVTD scheme to simulate the energetic wave equation and fit input parameters to observed phenomena.
 
-*Acoustic Measurements.* Captured and studied spatial impulse responses using Soundfield and Tetramic devices in diffuse and non-diffuse contexts.
+*Acoustic Measurements.* Captured and studied spatial impulse responses using first-order ambisonic microphones in diffuse and non-diffuse contexts.
 
 ## Stanford University, 2015 - 2016
 **MA in Music, Science, & Technology**, Center for Computer Research in Music and Acoustics (CCRMA), 3.98 GPA
@@ -84,6 +84,17 @@ Git, Perforce, Hugo, CircleCI, LaTeX (Beamer, TikZ), Graphviz.
 # Publications and Presentations
 
 [Google Scholar.](https://scholar.google.com/citations?user=R9Q-myYAAAAJ)
+
+**_Toward Three-Dimensional Computation of the Acoustic Energy-Stress Tensor._
+Aidan Meacham.
+PhD Thesis, Sorbonne Université (2021).**
+
+The energy-stress tensor method is a theoretical approach to approximating the energetic contours of the "stochastic reverberation" using continuity equations between acoustical energy density, sound intensity, and momentum flux.
+These quantities may all be collected in a single tensor called the energy-stress tensor, which represents the connection between invariants in the acoustic field and the conservation equations relating its terms.
+This approach was previously demonstrated to be capable of representing the diffuse field in spaces that could be characterized as being one- or two-dimensional with respect to the characteristic length of the tensor quantities, such as a hallway or a floor of an office building.
+The thesis aims to extend these findings by a number of avenues: checking the frequency validity of previously derived models, introducing a source term and redefining the model in terms of a finite volume time domain (FVTD) approach, auralizing the results in the context of a hybrid acoustical model, and finally, providing a framework to explore the behavior of the tensor in larger three-dimensional spaces.
+Temporally and spatially averaged values of the tensor may be calculated directly in terms of the acoustic velocity potential in a pressure-velocity FVTD simulation, giving preliminary information regarding possible assumptions for future models without requiring exhaustive physical measurement.
+This may be used in future work to characterize simulation parameters in terms of geometry and materials properties rather than physical measurements.
 
 **_Auralization of a Hybrid Sound Field using an Energy-Stress Tensor Based Model._
 Aidan Meacham, Roland Badeau, Jean-Dominique Polack.
