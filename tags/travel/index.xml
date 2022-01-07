@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Travel on Aidan Meacham</title>
+    <link>https://aidanmeacham.com/tags/travel/</link>
+    <description>Recent content in Travel on Aidan Meacham</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 01 Oct 2017 19:36:35 -0700</lastBuildDate>
+    
+	<atom:link href="https://aidanmeacham.com/tags/travel/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ways to Include Images in Hugo</title>
+      <link>https://aidanmeacham.com/post/including-images/</link>
+      <pubDate>Sun, 01 Oct 2017 19:36:35 -0700</pubDate>
+      
+      <guid>https://aidanmeacham.com/post/including-images/</guid>
+      <description>What started out as an attempt to put together a travelogue turned into a rabbit hole about how best to store and reference images. There is some valuable discussion about where the topic may end up (who knows, maybe I&amp;rsquo;ll learn Go and take a crack at it myself), but also details the methods that are currently being used to various effect. One other topic I wanted to explore is the figure shortcode, which supports a little more information than a simple markdown image, and is more flexible for use with a theme.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='sendToRemote: A MATLAB utility for running code on a remote server In the course of iterating on simulation code that was painful enough on my local machine to merit running on a more powerful server, I found myself copying code back and forth, shelling in and out, and feeling like I was losing a lot of time to &ldquo;bookkeeping&rdquo; rather than actually working on my code.
+So, I spent a lot of time writing a utility so I could handle the situation directly in MATLAB rather than switching back and forth between the local IDE and terminal.'>
+
+<meta property='og:title' content='MATLAB utility: sendToRemote • Aidan Meacham'>
+<meta property='og:description' content='sendToRemote: A MATLAB utility for running code on a remote server In the course of iterating on simulation code that was painful enough on my local machine to merit running on a more powerful server, I found myself copying code back and forth, shelling in and out, and feeling like I was losing a lot of time to &ldquo;bookkeeping&rdquo; rather than actually working on my code.
+So, I spent a lot of time writing a utility so I could handle the situation directly in MATLAB rather than switching back and forth between the local IDE and terminal.'>
+<meta property='og:url' content='https://aidanmeacham.com/post/matlab-utility-sendtoremote/'>
+<meta property='og:site_name' content='Aidan Meacham'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='updates'><meta property='article:published_time' content='2020-04-27T13:25:05-07:00'/><meta property='article:modified_time' content='2020-04-27T13:25:05-07:00'/>
+
+<meta name="generator" content="Hugo 0.44" />
+
+  <title>MATLAB utility: sendToRemote • Aidan Meacham</title>
+  <link rel='canonical' href='https://aidanmeacham.com/post/matlab-utility-sendtoremote/'>
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700&subset=latin'>
+<link rel='stylesheet' href='/css/main.67a788c9.css'>
+
+
+
+</head>
+
+
+<body class='page'>
+  <div class='site'>
+    <header id='header' class='header-container'>
+      <div class='site-header'>
+        <nav id='navmenu' aria-label='Main Menu'>
+  <ul class='main-menu'>
+    
+    <li>
+      <a href='https://aidanmeacham.com' 
+        
+      >Home</a>
+    </li>
+    
+    <li>
+      <a href='/about/' 
+        
+      >About</a>
+    </li>
+    
+    <li>
+      <a href='/projects/' 
+        
+      >Projects</a>
+    </li>
+    
+    <li>
+      <a href='/publications/' 
+        
+      >Publications</a>
+    </li>
+    
+  </ul>
+</nav>
+
+        <div class='site-info'>
+          
+          <p class='site-title title'>Aidan Meacham</p>
+          
+          <p class='site-description'>PhD Candidate, Paris // Acoustic Engineer, San Francisco</p>
+        </div>
+      </div>
+    </header>
+
+
+<main class='main'>
+  <article lang='en' class='entry'>
+    <header class='entry-header'>
+  <div class='entry-info'>
+    <h1 class='entry-title title'>MATLAB utility: sendToRemote</h1>
+    
+  </div>
+  
+<div class='meta'>
+  <span class='posted-on'>
+    <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+
+    <span class='screen-reader'>Posted on </span>
+    <time class='date' datetime='2020-04-27T13:25:05-07:00'>2020, Apr 27</time>
+  </span>
+  
+  <span class='byline'>
+    <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M21,21V20c0-2.76-4-5-9-5s-9,2.24-9,5v1"/>
+  <path d="M16,6.37A4,4,0,1,1,12.63,3,4,4,0,0,1,16,6.37Z"/>
+  
+</svg>
+
+    <span class='screen-reader'> by </span>
+    Aidan Meacham
+  </span>
+  
+  
+</div>
+
+
+</header>
+
+    <div class='entry-content'>
+  
+
+<h3 id="sendtoremote-a-matlab-utility-for-running-code-on-a-remote-server">sendToRemote: A MATLAB utility for running code on a remote server</h3>
+
+<p>In the course of iterating on simulation code that was painful enough on my local machine to merit running on a more powerful server, I found myself copying code back and forth, shelling in and out, and feeling like I was losing a lot of time to &ldquo;bookkeeping&rdquo; rather than actually working on my code.</p>
+
+<p>So, I spent a <em>lot</em> of time writing a utility so I could handle the situation directly in MATLAB rather than switching back and forth between the local IDE and terminal.
+You can find it on <a href="https://github.com/1ceaham/sendToRemote">Github</a>, or on the MATLAB <a href="https://www.mathworks.com/matlabcentral/fileexchange/74801-sendtoremote">FileExchange</a>.</p>
+
+<h2 id="why">Why?</h2>
+
+<p>Some would suggest that I just edit the files on the remote machine directly, which bothered me for a few reasons.
+One was that any changes would need to be reflected back to my machine, or managed through git, or something like that, which felt like another obstacle to surmount.
+I&rsquo;d rather have the definitive version of the file on my disk so I can use version management to mark actual changes, not as a glorified syncing system.
+Furthermore, while I&rsquo;m pretty comfortable editing a few files at the command line, I don&rsquo;t have the vim-fu to be able to manage multiple files in the same way that I&rsquo;m used to in the MATLAB editor or even Sublime Text.
+Furthermore, since I&rsquo;m on Windows 10, the main way that I interact with the servers is through the <a href="https://docs.microsoft.com/en-us/windows/wsl/faq">Windows Subsystem for Linux</a> (WSL), which means that I can&rsquo;t run GUI apps on the remote machine and display them locally without VNC or TeamViewer, which I have no interest in setting up and supporting with IT, and would result in some pretty awful typing latency given current geographic limitations.
+(I should note that I use version 1 of WSL, not the VM-like version 2, which informs some of the decisions I made.)
+I also prefer things to be programmatic in the first place, so removing as much &ldquo;manual&rdquo; labor as possible was a primary goal.</p>
+
+<h2 id="limitations">Limitations</h2>
+
+<p>Being perfectly honest, this tool feels like a real hack (albeit a successful one) with an extremely small userbase.
+I&rsquo;m sure that the number of MATLAB users out there that are running code on a remote machine without the Distributed Computing Server / Toolbox (or MATLAB Parallel Server as I think it&rsquo;s called these days) on Windows 10 using WSL is about 2, and the other one probably resigned themselves to just copying things over manually.
+Thus, just by the toolchain that I&rsquo;ve required, I&rsquo;m not expecting to get much traction.
+If users on Mac or Linux want to help iron out any issues with the <code>screen</code> configuration, that would be great - please reach out to me on Github (perhaps by opening an issue).
+Ideally, given the programs that I&rsquo;ve used (<code>rsync, ssh, screen</code>), it should actually function relatively well on all platforms, but testing already feels brittle on one system, and I&rsquo;m not sure that the strategy I&rsquo;ve chosen is ideal anyway.</p>
+
+<h2 id="thoughts">Thoughts</h2>
+
+<p>In any case, this is what I actually use to run code on a daily basis on remote servers.
+Since it uses <code>ssh</code>&rsquo;s config directly, adding another server is as simple as another host line in the config file, and most of the pathing tricks seem to work well.
+Of course, most of my work is pretty well self-contained and doesn&rsquo;t ingest a lot of data, but I can see some very straightforward paths to implementing fixes for users that require that functionality (I just don&rsquo;t have need for it at the moment and am prioritizing other work).
+It would be very interesting to continue to develop a testing framework and see how other people might use it to uncover some of the cases or problems I didn&rsquo;t think about, but for now, that&rsquo;s a future project.</p>
+
+<p>Thanks for reading!</p>
+
+</div>
+
+    
+<footer class='entry-footer'>
+  
+    
+      
+      <div class='categories'>
+  <span class='category-icon'>
+    <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
+  
+</svg>
+
+  </span>
+  <span class='screen-reader'>Categories: </span><a class='category' href='/categories/others'>Others</a></div>
+
+    
+  
+    
+      
+      <div class='tags'>
+  <span class='tag-icon'>
+    <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+
+  </span>
+  <span class='screen-reader'>Tags: </span><a class='tag' href='/tags/updates'>Updates</a></div>
+
+    
+  
+</footer>
+
+
+  </article>
+
+  
+    
+<nav class='entry-nav'>
+  <div class='entry-nav-links'><div class='prev-entry'>
+      <a href='https://aidanmeacham.com/post/tutorial-report-dalembert/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader'>Previous post: </span>Tutorial report: ∂’Alembert learns git</a>
+    </div></div>
+</nav>
+
+
+  
+
+  
+    <div class='comments-container'>
+  
+</div>
+
+  
+</main>
+
+    <footer id='footer' class='footer-container'>
+      <div class='footer'>
+        <div class='social'>
+  <nav aria-label='Social Menu'>
+    <ul class='social-menu'><li>
+        <a href='mailto:contact@aidanmeacham.com' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Email account in new tab</span>
+          <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+
+        </a>
+      </li><li>
+        <a href='https://github.com/1ceaham' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Github account in new tab</span>
+          <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+
+        </a>
+      </li></ul>
+  </nav>
+</div>
+
+        <div class='copyright'>
+          <p>
+  &copy; 2022 Aidan Meacham</p>
+
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src='/js/main.af838dd5.js'></script>
+  
+
+</body>
+
+</html>
+

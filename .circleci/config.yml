@@ -1,0 +1,13 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: cibuilds/hugo:0.44
+    steps:
+      - checkout
+      - run: git submodule sync
+      - run: git submodule update --init
+      - run: bash ./publish_to_master.sh
+    branches:
+      only:
+        - source

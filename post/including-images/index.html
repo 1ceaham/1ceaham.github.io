@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='What started out as an attempt to put together a travelogue turned into a rabbit hole about how best to store and reference images. There is some valuable discussion about where the topic may end up (who knows, maybe I&rsquo;ll learn Go and take a crack at it myself), but also details the methods that are currently being used to various effect. One other topic I wanted to explore is the figure shortcode, which supports a little more information than a simple markdown image, and is more flexible for use with a theme.'>
+
+<meta property='og:title' content='Ways to Include Images in Hugo • Aidan Meacham'>
+<meta property='og:description' content='What started out as an attempt to put together a travelogue turned into a rabbit hole about how best to store and reference images. There is some valuable discussion about where the topic may end up (who knows, maybe I&rsquo;ll learn Go and take a crack at it myself), but also details the methods that are currently being used to various effect. One other topic I wanted to explore is the figure shortcode, which supports a little more information than a simple markdown image, and is more flexible for use with a theme.'>
+<meta property='og:url' content='https://aidanmeacham.com/post/including-images/'>
+<meta property='og:site_name' content='Aidan Meacham'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='travel'><meta property='article:tag' content='updates'><meta property='article:published_time' content='2017-10-01T19:36:35-07:00'/><meta property='article:modified_time' content='2017-10-01T19:36:35-07:00'/>
+
+<meta name="generator" content="Hugo 0.44" />
+
+  <title>Ways to Include Images in Hugo • Aidan Meacham</title>
+  <link rel='canonical' href='https://aidanmeacham.com/post/including-images/'>
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700&subset=latin'>
+<link rel='stylesheet' href='/css/main.67a788c9.css'>
+
+
+
+</head>
+
+
+<body class='page'>
+  <div class='site'>
+    <header id='header' class='header-container'>
+      <div class='site-header'>
+        <nav id='navmenu' aria-label='Main Menu'>
+  <ul class='main-menu'>
+    
+    <li>
+      <a href='https://aidanmeacham.com' 
+        
+      >Home</a>
+    </li>
+    
+    <li>
+      <a href='/about/' 
+        
+      >About</a>
+    </li>
+    
+    <li>
+      <a href='/projects/' 
+        
+      >Projects</a>
+    </li>
+    
+    <li>
+      <a href='/publications/' 
+        
+      >Publications</a>
+    </li>
+    
+  </ul>
+</nav>
+
+        <div class='site-info'>
+          
+          <p class='site-title title'>Aidan Meacham</p>
+          
+          <p class='site-description'>PhD Candidate, Paris // Acoustic Engineer, San Francisco</p>
+        </div>
+      </div>
+    </header>
+
+
+<main class='main'>
+  <article lang='en' class='entry'>
+    <header class='entry-header'>
+  <div class='entry-info'>
+    <h1 class='entry-title title'>Ways to Include Images in Hugo</h1>
+    
+  </div>
+  
+<div class='meta'>
+  <span class='posted-on'>
+    <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+
+    <span class='screen-reader'>Posted on </span>
+    <time class='date' datetime='2017-10-01T19:36:35-07:00'>2017, Oct 1</time>
+  </span>
+  
+  <span class='byline'>
+    <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M21,21V20c0-2.76-4-5-9-5s-9,2.24-9,5v1"/>
+  <path d="M16,6.37A4,4,0,1,1,12.63,3,4,4,0,0,1,16,6.37Z"/>
+  
+</svg>
+
+    <span class='screen-reader'> by </span>
+    Aidan Meacham
+  </span>
+  
+  
+</div>
+
+
+</header>
+
+    <div class='entry-content'>
+  
+
+<p>What started out as an attempt to put together a travelogue turned into a rabbit hole about how best to store and reference images. There is some valuable <a href="https://github.com/gohugoio/hugo/issues/3651">discussion</a> about where the topic may end up (who knows, maybe I&rsquo;ll learn Go and take a crack at it myself), but also details the methods that are currently being used to various effect. One other topic I wanted to explore is the <em>figure</em> shortcode, which supports a little more information than a simple markdown image, and is more flexible for use with a theme. Further note that I wanted to link to the full image, which in some cases, took even more wrangling.</p>
+
+<h2 id="figure-image-in-static">Figure, image in static</h2>
+
+<p><a href="/img/travel/water-lilies.jpg">
+<figure>
+    
+        <img src="/img/travel/water-lilies.jpg" />
+    
+    
+    <figcaption>
+        <h4>Monet&#39;s Morning at L&#39;Orangerie</h4>
+        
+    </figcaption>
+    
+</figure>
+</a></p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">[{{&lt; <span style="color:#a6e22e">figure</span> <span style="color:#a6e22e">src</span>=<span style="color:#e6db74">&#34;/img/travel/water-lilies.jpg&#34;</span> <span style="color:#a6e22e">title</span>=<span style="color:#e6db74">&#34;Monet&#39;s Morning at L&#39;Orangerie&#34;</span> &gt;}}](<span style="color:#f92672">/</span><span style="color:#a6e22e">img</span><span style="color:#f92672">/</span><span style="color:#a6e22e">travel</span><span style="color:#f92672">/</span><span style="color:#a6e22e">water</span><span style="color:#f92672">-</span><span style="color:#a6e22e">lilies</span>.<span style="color:#a6e22e">jpg</span>)</code></pre></div>
+
+<p>or</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">{{&lt; <span style="color:#a6e22e">figure</span> <span style="color:#a6e22e">src</span>=<span style="color:#e6db74">&#34;/img/travel/water-lilies.jpg&#34;</span> <span style="color:#a6e22e">title</span>=<span style="color:#e6db74">&#34;Monet&#39;s Morning at L&#39;Orangerie&#34;</span> <span style="color:#a6e22e">link</span>=<span style="color:#e6db74">&#34;/img/travel/water-lilies.jpg&#34;</span> &gt;}}</code></pre></div>
+
+<p>A couple observations here. First, at first glance, the figure title doesn&rsquo;t appear to be evaluated as Markdown, so using syntax like *italicized* doesn&rsquo;t work. Hopefully I can figure out how to do a second rendering pass without having to override the theme or figure shortcode.</p>
+
+<p>Next, in order to get the above code example to work, I needed a way to escape shortcodes in order to keep them from evaluating. There is a kludgy, but working (if slightly undocumented) feature to do this that you can read about <a href="https://discourse.gohugo.io/t/a-way-to-mark-plain-text-and-stop-hugo-from-interpreting/1325/2">here</a>. One annoying issue with this method is that the formatting breaks highlighting in Sublime 3, with italics running through the end of the line.</p>
+
+<p>Finally, we actually have two options for making the photo a link. If one uses the link field in the figure shortcode, the image itself is linked, but not the caption text. If you want the caption to link as well, you may wrap the entire shortcode in a Markdown link.</p>
+
+<h2 id="markdown-image-in-static">Markdown, image in static</h2>
+
+<p><a href="/img/travel/water-lilies.jpg"><img src="/img/travel/water-lilies.jpg" alt="Water Lilies" /></a></p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">[<span style="color:#f92672">![Water Lilies</span>](<span style="color:#a6e22e">/img/travel/water-lilies.jpg</span>)](/img/travel/water-lilies.jpg)</code></pre></div>
+
+<p>The advantage of this method is the relative simplicity without use of a shortcode, without much loss of information. Just make sure to include the first slash to avoid relative paths!</p>
+
+<h2 id="markdown-image-in-article-folder">Markdown, image in article folder</h2>
+
+<p><a href="isola-bella.jpg"><img src="isola-bella.jpg" alt="Isola Bella" /></a></p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">[<span style="color:#f92672">![Isola Bella</span>](<span style="color:#a6e22e">isola-bella.jpg</span>)](isola-bella.jpg)</code></pre></div>
+
+<p>If you are interested in keeping image content with a given article (like I have done here), it makes sense to create a folder under posts rather than a single markdown file. Creating an &ldquo;index.md&rdquo; in that folder allows the slug with that folder name to behave just like a typical post, with the cost of slightly more organizational overhead. The result, however, is quite intuitive - the shortest style for including an image, with the added benefit of keeping the image close to the content itself (rather than being lost in /static/ where it could be forgotten).</p>
+
+<p>Next time &lsquo;round, we&rsquo;ll talk about galleries, thumbnails and other ways to avoid serving huge images up front!</p>
+
+</div>
+
+    
+<footer class='entry-footer'>
+  
+    
+      
+      <div class='categories'>
+  <span class='category-icon'>
+    <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
+  
+</svg>
+
+  </span>
+  <span class='screen-reader'>Categories: </span><a class='category' href='/categories/others'>Others</a></div>
+
+    
+  
+    
+      
+      <div class='tags'>
+  <span class='tag-icon'>
+    <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+
+  </span>
+  <span class='screen-reader'>Tags: </span><a class='tag' href='/tags/travel'>Travel</a>, <a class='tag' href='/tags/updates'>Updates</a></div>
+
+    
+  
+</footer>
+
+
+  </article>
+
+  
+    
+<nav class='entry-nav'>
+  <div class='entry-nav-links'><div class='prev-entry'>
+      <a href='https://aidanmeacham.com/post/add-email/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader'>Previous post: </span>Adding Email Forwarding... Eventually</a>
+    </div><div class='next-entry'>
+      <a href='https://aidanmeacham.com/post/tutorial-report-dalembert/'>
+        <span class='screen-reader'>Next post: </span>Tutorial report: ∂’Alembert learns git<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+
+  
+
+  
+    <div class='comments-container'>
+  
+</div>
+
+  
+</main>
+
+    <footer id='footer' class='footer-container'>
+      <div class='footer'>
+        <div class='social'>
+  <nav aria-label='Social Menu'>
+    <ul class='social-menu'><li>
+        <a href='mailto:contact@aidanmeacham.com' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Email account in new tab</span>
+          <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+
+        </a>
+      </li><li>
+        <a href='https://github.com/1ceaham' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Github account in new tab</span>
+          <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+
+        </a>
+      </li></ul>
+  </nav>
+</div>
+
+        <div class='copyright'>
+          <p>
+  &copy; 2022 Aidan Meacham</p>
+
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src='/js/main.af838dd5.js'></script>
+  
+
+</body>
+
+</html>
+

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Aidan Meacham</title>
+    <link>https://aidanmeacham.com/page/</link>
+    <description>Recent content in Pages on Aidan Meacham</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 06 Dec 2020 16:36:23 -0700</lastBuildDate>
+    
+	<atom:link href="https://aidanmeacham.com/page/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>FA2020</title>
+      <link>https://aidanmeacham.com/fa2020/</link>
+      <pubDate>Sun, 06 Dec 2020 16:36:23 -0700</pubDate>
+      
+      <guid>https://aidanmeacham.com/fa2020/</guid>
+      <description>This page contains materials related to our submission to Forum Acusticum in December 2020.
+Auralization of a Hybrid Sound Field using an Energy-Stress Tensor Based Model Updated slides (.pdf, 5.64 MB)
+Demonstration video on YouTube (unlisted)
+FVTD repository on Github</description>
+    </item>
+    
+    <item>
+      <title>Publications</title>
+      <link>https://aidanmeacham.com/publications/</link>
+      <pubDate>Wed, 08 Nov 2017 18:27:23 -0700</pubDate>
+      
+      <guid>https://aidanmeacham.com/publications/</guid>
+      <description>Google Scholar.
+Lower bound on frequency validity of energy-stress tensor based diffuse sound field model. Aidan Meacham, Roland Badeau, Jean-Dominique Polack. Presented at and published in the proceedings of ICA (Aachen, 2019).
+A lower bound on the frequency validity limit is established for an energetic wave equation derived from the energy-stress tensor, examined in the one-dimensional case [Dujourdy et al, Acta Acustica united with Acustica 103:480-491, 2017]. In practice, the bound is encountered when determining the absorption and diffusion coefficients by iteratively approaching the temporal and spatial decay of measured data.</description>
+    </item>
+    
+    <item>
+      <title>CV</title>
+      <link>https://aidanmeacham.com/cv/</link>
+      <pubDate>Mon, 16 Oct 2017 18:27:23 -0700</pubDate>
+      
+      <guid>https://aidanmeacham.com/cv/</guid>
+      <description>Aidan Meacham PhD, Acoustics, Sorbonne Université - Paris, France
+Acoustic Engineer - San Francisco, California, USA
+https://aidanmeacham.com/cv/
+https://www.linkedin.com/in/aidanmeacham/
+Education Sorbonne Université, 2018 - 2021 PhD, Specialization in Acoustics, Institut Jean le Rond ∂&amp;rsquo;Alembert, thesis defended December 9, 2021
+Toward Three-Dimensional Computation of the Acoustic Energy-Stress Tensor. Thesis directors Jean-Dominique Polack (Institut ∂&amp;rsquo;Alembert) and Roland Badeau (LTCI, Télécom Paris, Université Paris-Saclay).
+Theoretical Acoustics. Studied statistical late reverberation through an energetic wave equation in energy density and sound intensity (similar to diffusion equation approaches) to efficiently model sound fields in large spaces.</description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>https://aidanmeacham.com/projects/</link>
+      <pubDate>Wed, 27 Sep 2017 21:54:23 -0700</pubDate>
+      
+      <guid>https://aidanmeacham.com/projects/</guid>
+      <description>Stanford The Laptop Accordion - A new musical instrument. Download the paper here.
+Alexsounder - Sound visualization sculpture.
+Digital Waveguide Network Reverberation in Non-Convex Rectilinear Spaces. Download the paper here.
+Low-cost open-source ribbon microphone. Some documentation here, laser cutter files and instructions forthcoming.
+Remote data collection and uploading via cell networks. Originally used as a tide sensor; leveraged as a complex LFO for musical effects. See some of the source code here.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://aidanmeacham.com/about/</link>
+      <pubDate>Wed, 27 Sep 2017 21:27:23 -0700</pubDate>
+      
+      <guid>https://aidanmeacham.com/about/</guid>
+      <description>Hi there!
+My name is Aidan, and I&amp;rsquo;m a PhD student studying acoustics at Sorbonne Université in Paris. The subject of my doctoral studies is extending a fast late reverberation model based on the conservation of the wave-stress tensor to three dimensions.
+I spend a lot of my time in San Francisco, CA, where I worked as an acoustic engineer at Knowles Electronics / Intelligent Audio. In that capacity, I performed virtual data creation and microphone array optimization for IoT devices, as well as audio DSP research and development.</description>
+    </item>
+    
+  </channel>
+</rss>
